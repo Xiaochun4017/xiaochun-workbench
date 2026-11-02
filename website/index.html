@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#efe9e2">
+<meta name="description" content="晓春的个人工作台 · 小说、知识库与生活创作">
+<title>晓春工作台 · Xiaochun Workbench</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/plant.jpg">
+</head>
+<body>
+
+<!-- 顶部菜单栏 -->
+<header class="menubar">
+  <div class="menubar-left">
+    <span class="apple-dot">✿</span>
+    <strong>晓春工作台</strong>
+  </div>
+  <div class="menubar-right">
+    <span id="greeting"></span>
+    <span id="clock"></span>
+  </div>
+</header>
+
+<!-- 桌面 -->
+<main class="desktop" id="desktop">
+  <div class="desktop-hint">双击图标，打开一扇窗</div>
+
+  <!-- 桌面图标 -->
+  <div class="icons">
+    <button class="icon" data-window="win-novel">
+      <span class="icon-face">📚</span>
+      <span class="icon-label">我的小说创作</span>
+    </button>
+    <button class="icon" data-window="win-vault">
+      <span class="icon-face">🧠</span>
+      <span class="icon-label">我的知识笔记</span>
+    </button>
+    <button class="icon" data-window="win-art">
+      <span class="icon-face">🖼️</span>
+      <span class="icon-label">我的画册</span>
+    </button>
+    <button class="icon" data-window="win-app">
+      <span class="icon-face">🌷</span>
+      <span class="icon-label">晓春工作台.app</span>
+    </button>
+    <button class="icon" data-window="win-about">
+      <span class="icon-face">🌙</span>
+      <span class="icon-label">关于晓春</span>
+    </button>
+  </div>
+
+  <!-- 窗口：小说创作 -->
+  <section class="window" id="win-novel" style="--x:7vw;--y:14vh;--w:min(560px,92vw)">
+    <header class="win-bar">
+      <span class="win-dot red"></span><span class="win-dot yellow"></span><span class="win-dot green"></span>
+      <span class="win-title">我的小说创作 · 「夏」三部曲</span>
+      <button class="win-close" data-close="win-novel" aria-label="关闭">×</button>
+    </header>
+    <div class="win-body">
+      <p class="win-lede">笔名 <b>晓春望禾</b>。三部曲计划齐发后，申请豆瓣阅读签约。</p>
+      <div class="novel-list">
+        <div class="novel-row">
+          <div class="novel-name">《知夏》</div>
+          <div class="novel-meta"><span class="bar"><i style="width:100%"></i></span><span class="num">41,294 字 · 中篇 · 23 节</span></div>
+        </div>
+        <div class="novel-row">
+          <div class="novel-name">《蝉夏》</div>
+          <div class="novel-meta"><span class="bar"><i style="width:59%"></i></span><span class="num">24,393 字</span></div>
+        </div>
+        <div class="novel-row">
+          <div class="novel-name">《听夏》</div>
+          <div class="novel-meta"><span class="bar"><i style="width:53%"></i></span><span class="num">21,886 字 · 短篇 · 9 节</span></div>
+        </div>
+      </div>
+      <p class="win-foot">合计约 87,000 字 · 与《知夏》互文的《听夏》已完成投稿</p>
+    </div>
+  </section>
+
+  <!-- 窗口：Obsidian 知识库 -->
+  <section class="window" id="win-vault" style="--x:32vw;--y:22vh;--w:min(620px,92vw)">
+    <header class="win-bar">
+      <span class="win-dot red"></span><span class="win-dot yellow"></span><span class="win-dot green"></span>
+      <span class="win-title">我的知识笔记 · Obsidian 库</span>
+      <button class="win-close" data-close="win-vault" aria-label="关闭">×</button>
+    </header>
+    <div class="win-body">
+      <div class="stat-grid">
+        <div class="stat"><b>2,983</b><span>笔记总数</span></div>
+        <div class="stat"><b>38</b><span>公众号文章</span></div>
+        <div class="stat"><b>2,480</b><span>小红书收藏</span></div>
+        <div class="stat"><b>3</b><span>收藏账号同步</span></div>
+      </div>
+      <h3 class="win-sub">公众号写作 · 部分篇目</h3>
+      <ul class="article-list">
+        <li>下班后的 2 小时，我把它还给了自己 <em>创刊号</em></li>
+        <li>一个人去看展的两个小时</li>
+        <li>深秋的菜市场</li>
+        <li>电脑不累，人会累</li>
+        <li>我的购物车很安静</li>
+        <li>立冬，万物收藏</li>
+        <li>在江南水乡，慢慢过自己的生活</li>
+        <li>生活的美好，藏在不起眼的细碎日常里</li>
+        <li>周末宅家，是成年人的自我修复</li>
+        <li>我停更了十四天</li>
+      </ul>
+      <h3 class="win-sub">小红书收藏同步</h3>
+      <div class="fav-row">
+        <span class="fav-chip">旧账号 泡沫之夏1986 · 1,879</span>
+        <span class="fav-chip">新账号 晓春漫知行 · 350</span>
+        <span class="fav-chip">主账号 · 251</span>
+      </div>
+      <p class="win-foot">每周六自动同步至 Obsidian · 严格去重</p>
+    </div>
+  </section>
+
+  <!-- 窗口：画册 -->
+  <section class="window" id="win-art" style="--x:14vw;--y:30vh;--w:min(540px,92vw)">
+    <header class="win-bar">
+      <span class="win-dot red"></span><span class="win-dot yellow"></span><span class="win-dot green"></span>
+      <span class="win-title">我的画册 · 收藏与灵感</span>
+      <button class="win-close" data-close="win-art" aria-label="关闭">×</button>
+    </header>
+    <div class="win-body">
+      <div class="art-grid">
+        <figure><img src="assets/art-heal.png" alt="治愈风插画" loading="lazy"><figcaption>治愈风插画</figcaption></figure>
+        <figure><img src="assets/plant.jpg" alt="绿植" loading="lazy"><figcaption>一株绿植</figcaption></figure>
+        <figure><img src="assets/forest.jpg" alt="森林" loading="lazy"><figcaption>森林边</figcaption></figure>
+      </div>
+      <p class="win-foot">热爱艺术 · 美术馆 · 博物馆 · 非遗文化</p>
+    </div>
+  </section>
+
+  <!-- 窗口：晓春工作台.app -->
+  <section class="window" id="win-app" style="--x:40vw;--y:12vh;--w:min(520px,92vw)">
+    <header class="win-bar">
+      <span class="win-dot red"></span><span class="win-dot yellow"></span><span class="win-dot green"></span>
+      <span class="win-title">晓春工作台.app · 本机应用</span>
+      <button class="win-close" data-close="win-app" aria-label="关闭">×</button>
+    </header>
+    <div class="win-body">
+      <p class="win-lede">这台电脑的桌面上，住着一个真的 App。</p>
+      <ul class="plain-list">
+        <li><b>创作爆款工作台</b> — 小红书 × 公众号选题、记录与复盘，本地保存，不会自动发布内容</li>
+        <li><b>日常工作台</b> — 日常事务与随手记</li>
+        <li><b>数据自主</b> — 支持导出 / 恢复备份，数据都在自己手里</li>
+      </ul>
+      <p class="win-foot">cn.xiaochun.workbench · macOS 12+</p>
+    </div>
+  </section>
+
+  <!-- 窗口：关于 -->
+  <section class="window" id="win-about" style="--x:24vw;--y:40vh;--w:min(500px,92vw)">
+    <header class="win-bar">
+      <span class="win-dot red"></span><span class="win-dot yellow"></span><span class="win-dot green"></span>
+      <span class="win-title">关于晓春</span>
+      <button class="win-close" data-close="win-about" aria-label="关闭">×</button>
+    </header>
+    <div class="win-body">
+      <blockquote class="about-quote">在江南，慢慢过自己的生活。把下班后的时间，还给自己。</blockquote>
+      <ul class="plain-list">
+        <li>写字的人 · 公众号「夏日的傍晚在成长中」</li>
+        <li>写小说的人 · 「夏」三部曲，笔名晓春望禾</li>
+        <li>爱看展的人 · 美术馆、博物馆、非遗</li>
+      </ul>
+      <p class="win-foot">这个网页由她的桌面整理而来 · 2026 年秋</p>
+    </div>
+  </section>
+</main>
+
+<!-- Dock -->
+<nav class="dock" aria-label="快捷入口">
+  <button data-window="win-novel" title="我的小说创作">📚</button>
+  <button data-window="win-vault" title="我的知识笔记">🧠</button>
+  <button data-window="win-art" title="我的画册">🖼️</button>
+  <button data-window="win-app" title="晓春工作台.app">🌷</button>
+  <button data-window="win-about" title="关于晓春">🌙</button>
+  <a href="https://github.com/Xiaochun4017" target="_blank" rel="noopener" title="GitHub">🐙</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
